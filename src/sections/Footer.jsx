@@ -19,7 +19,7 @@ const Footer = () => {
             </div>
 
 
-            <p className="text-white-600">© 2024 Inayath.All right reserved</p>
+            <p className="text-white-600">© 2025 Inayath.All right reserved</p>
         </section>
     )
 }
