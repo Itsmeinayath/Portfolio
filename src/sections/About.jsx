@@ -135,54 +135,54 @@ const About = () => {
                             </div>
                             
                             <div className="overflow-x-auto">
-                                <table className="w-full text-left border-collapse text-sm font-mono">
+                                <table className="w-full text-left border-collapse text-xs sm:text-sm font-mono">
                                     <thead>
-                                        <tr className="border-b border-white/10 text-zinc-500 text-xs">
-                                            <th className="py-2 px-2 font-normal">UNIT</th>
-                                            <th className="py-2 px-2 font-normal">STATE</th>
-                                            <th className="py-2 px-2 font-normal">DOMAIN</th>
+                                        <tr className="border-b border-white/10 text-zinc-500 text-[10px] sm:text-xs">
+                                            <th className="py-2 px-1 sm:px-2 font-normal">UNIT</th>
+                                            <th className="py-2 px-1 sm:px-2 font-normal">STATE</th>
+                                            <th className="py-2 px-1 sm:px-2 font-normal">DOMAIN</th>
                                         </tr>
                                     </thead>
                                     <tbody className="text-zinc-300">
                                         <tr className="hover:bg-white/5 transition-colors border-b border-white/5">
-                                            <td className="py-2 px-2 text-red-400">linux.service</td>
-                                            <td className="py-2 px-2 text-emerald-400">active (running)</td>
-                                            <td className="py-2 px-2 text-zinc-500">Operating System</td>
+                                            <td className="py-2 px-1 sm:px-2 text-red-400 truncate max-w-[80px] sm:max-w-none">linux.service</td>
+                                            <td className="py-2 px-1 sm:px-2 text-emerald-400">active (running)</td>
+                                            <td className="py-2 px-1 sm:px-2 text-zinc-500 truncate max-w-[80px] sm:max-w-none">Operating System</td>
                                         </tr>
                                         <tr className="hover:bg-white/5 transition-colors border-b border-white/5">
-                                            <td className="py-2 px-2 text-green-500">node.service</td>
-                                            <td className="py-2 px-2 text-emerald-400">active (running)</td>
-                                            <td className="py-2 px-2 text-zinc-500">Backend</td>
+                                            <td className="py-2 px-1 sm:px-2 text-green-500 truncate max-w-[80px] sm:max-w-none">node.service</td>
+                                            <td className="py-2 px-1 sm:px-2 text-emerald-400">active (running)</td>
+                                            <td className="py-2 px-1 sm:px-2 text-zinc-500 truncate max-w-[80px] sm:max-w-none">Backend</td>
                                         </tr>
                                         <tr className="hover:bg-white/5 transition-colors border-b border-white/5">
-                                            <td className="py-2 px-2 text-cyan-400">react.service</td>
-                                            <td className="py-2 px-2 text-emerald-400">active (running)</td>
-                                            <td className="py-2 px-2 text-zinc-500">Frontend</td>
+                                            <td className="py-2 px-1 sm:px-2 text-cyan-400 truncate max-w-[80px] sm:max-w-none">react.service</td>
+                                            <td className="py-2 px-1 sm:px-2 text-emerald-400">active (running)</td>
+                                            <td className="py-2 px-1 sm:px-2 text-zinc-500 truncate max-w-[80px] sm:max-w-none">Frontend</td>
                                         </tr>
                                         <tr className="hover:bg-white/5 transition-colors border-b border-white/5">
-                                            <td className="py-2 px-2 text-sky-300">postgres.service</td>
-                                            <td className="py-2 px-2 text-emerald-400">active (running)</td>
-                                            <td className="py-2 px-2 text-zinc-500">Database</td>
+                                            <td className="py-2 px-1 sm:px-2 text-sky-300 truncate max-w-[80px] sm:max-w-none">postgres.service</td>
+                                            <td className="py-2 px-1 sm:px-2 text-emerald-400">active (running)</td>
+                                            <td className="py-2 px-1 sm:px-2 text-zinc-500 truncate max-w-[80px] sm:max-w-none">Database</td>
                                         </tr>
                                         <tr className="hover:bg-white/5 transition-colors border-b border-white/5">
-                                            <td className="py-2 px-2 text-blue-500">docker.service</td>
-                                            <td className="py-2 px-2 text-emerald-400">active (running)</td>
-                                            <td className="py-2 px-2 text-zinc-500">Containers</td>
+                                            <td className="py-2 px-1 sm:px-2 text-blue-500 truncate max-w-[80px] sm:max-w-none">docker.service</td>
+                                            <td className="py-2 px-1 sm:px-2 text-emerald-400">active (running)</td>
+                                            <td className="py-2 px-1 sm:px-2 text-zinc-500 truncate max-w-[80px] sm:max-w-none">Containers</td>
                                         </tr>
                                         <tr className="hover:bg-white/5 transition-colors border-b border-white/5">
-                                            <td className="py-2 px-2 text-yellow-400">python.service</td>
-                                            <td className="py-2 px-2 text-emerald-400">active (running)</td>
-                                            <td className="py-2 px-2 text-zinc-500">Language</td>
+                                            <td className="py-2 px-1 sm:px-2 text-yellow-400 truncate max-w-[80px] sm:max-w-none">python.service</td>
+                                            <td className="py-2 px-1 sm:px-2 text-emerald-400">active (running)</td>
+                                            <td className="py-2 px-1 sm:px-2 text-zinc-500 truncate max-w-[80px] sm:max-w-none">Language</td>
                                         </tr>
                                         <tr className="hover:bg-white/5 transition-colors border-b border-white/5">
-                                            <td className="py-2 px-2 text-purple-400">kubernetes.service</td>
-                                            <td className="py-2 px-2 text-yellow-400 animate-pulse">activating (learning)</td>
-                                            <td className="py-2 px-2 text-zinc-500">Orchestration</td>
+                                            <td className="py-2 px-1 sm:px-2 text-purple-400 truncate max-w-[80px] sm:max-w-none">kubernetes.service</td>
+                                            <td className="py-2 px-1 sm:px-2 text-yellow-400 animate-pulse">activating (learning)</td>
+                                            <td className="py-2 px-1 sm:px-2 text-zinc-500 truncate max-w-[80px] sm:max-w-none">Orchestration</td>
                                         </tr>
                                         <tr className="hover:bg-white/5 transition-colors">
-                                            <td className="py-2 px-2 text-orange-400">aws.service</td>
-                                            <td className="py-2 px-2 text-zinc-600">waiting (queued)</td>
-                                            <td className="py-2 px-2 text-zinc-500">Cloud Infrastructure</td>
+                                            <td className="py-2 px-1 sm:px-2 text-orange-400 truncate max-w-[80px] sm:max-w-none">aws.service</td>
+                                            <td className="py-2 px-1 sm:px-2 text-zinc-600">waiting (queued)</td>
+                                            <td className="py-2 px-1 sm:px-2 text-zinc-500 truncate max-w-[80px] sm:max-w-none">Cloud Infrastructure</td>
                                         </tr>
                                     </tbody>
                                 </table>
@@ -191,13 +191,13 @@ const About = () => {
 
                         {/* 3. Terminal Contact */}
                         <div className="mt-auto pt-6 border-t border-white/5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-                            <div className="text-zinc-500 text-xs">~network $ ping inayath</div>
+                            <div className="text-zinc-500 text-xs hidden sm:block">~network $ ping inayath</div>
                             <button 
                                 onClick={handleCopy}
-                                className="group flex items-center gap-3 bg-white/5 hover:bg-white/10 border border-white/10 px-4 py-2 rounded-md transition-all active:scale-95"
+                                className="group w-full sm:w-auto flex flex-col sm:flex-row items-center gap-1 sm:gap-3 bg-white/5 hover:bg-white/10 border border-white/10 px-3 sm:px-4 py-3 sm:py-2 rounded-md transition-all active:scale-95 text-xs sm:text-sm"
                             >
                                 <span className="text-emerald-400">{hasCopied ? 'COPIED' : 'EXECUTE: mailto'}</span>
-                                <span className="text-zinc-300 group-hover:text-white transition-colors">itsmemohammedinayath@gmail.com</span>
+                                <span className="text-zinc-300 group-hover:text-white transition-colors truncate max-w-[220px] sm:max-w-none">itsmemohammedinayath@gmail.com</span>
                             </button>
                         </div>
                         
