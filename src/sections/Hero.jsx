@@ -18,7 +18,7 @@ const Hero = () => {
 
             {/* 3D Canvas Layer - Network is big and in the center */}
             <div className="w-full h-full absolute inset-0 z-10 pointer-events-none">
-                <Canvas className="w-full h-full">
+                <Canvas className="w-full h-full" style={{ pointerEvents: 'none', touchAction: 'auto' }}>
                     <Suspense fallback={<CanvasLoader />}>
                         <PerspectiveCamera makeDefault position={[0, 0, 24]} fov={60} />
                         
@@ -33,6 +33,7 @@ const Hero = () => {
                         <OrbitControls 
                             enableZoom={false} 
                             enablePan={false} 
+                            enableRotate={false}
                             autoRotate 
                             autoRotateSpeed={0.2} 
                             maxPolarAngle={Math.PI / 2 + 0.3} 
