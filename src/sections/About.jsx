@@ -190,7 +190,7 @@ const About = () => {
                         </div>
 
                         {/* 3. Terminal Contact */}
-                        <div className="mt-auto pt-6 border-t border-white/5 flex items-center justify-between">
+                        <div className="mt-auto pt-6 border-t border-white/5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
                             <div className="text-zinc-500 text-xs">~network $ ping inayath</div>
                             <button 
                                 onClick={handleCopy}

@@ -62,7 +62,7 @@ const Projects = () => {
 
             <div className="grid lg:grid-cols-12 grid-cols-1 gap-6 w-full items-start">
                 {/* Left Panel: Terminal/Console Style Project List */}
-                <div className="lg:col-span-4 bg-[#050505] border border-white/10 rounded-xl overflow-hidden flex flex-col shadow-2xl sticky top-24 z-20">
+                <div className="lg:col-span-4 bg-[#050505] border border-white/10 rounded-xl overflow-hidden flex flex-col shadow-2xl lg:sticky lg:top-24 z-20">
                     <div className="h-10 bg-white/5 border-b border-white/10 flex items-center px-4 gap-2 flex-shrink-0">
                         <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
                         <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
