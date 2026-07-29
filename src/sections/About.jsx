@@ -75,7 +75,7 @@ const About = () => {
                         <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
                         <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
                     </div>
-                    <div className="text-zinc-400 text-xs tracking-widest">SYSTEM_INSPECTION: MOHAMMED_INAYATH.SYS</div>
+                    <div className="text-zinc-400 text-xs tracking-widest">SYSTEM_INSPECTION: L_MOHAMMED_INAYATH.SYS</div>
                     <div className="w-16"></div> {/* Spacer for centering */}
                 </div>
 
@@ -145,12 +145,12 @@ const About = () => {
                                     </thead>
                                     <tbody className="text-zinc-300">
                                         <tr className="hover:bg-white/5 transition-colors border-b border-white/5">
-                                            <td className="py-2 px-2 text-zinc-200">linux.service</td>
+                                            <td className="py-2 px-2 text-red-400">linux.service</td>
                                             <td className="py-2 px-2 text-emerald-400">active (running)</td>
                                             <td className="py-2 px-2 text-zinc-500">Operating System</td>
                                         </tr>
                                         <tr className="hover:bg-white/5 transition-colors border-b border-white/5">
-                                            <td className="py-2 px-2 text-blue-400">node.service</td>
+                                            <td className="py-2 px-2 text-green-500">node.service</td>
                                             <td className="py-2 px-2 text-emerald-400">active (running)</td>
                                             <td className="py-2 px-2 text-zinc-500">Backend</td>
                                         </tr>
@@ -160,7 +160,7 @@ const About = () => {
                                             <td className="py-2 px-2 text-zinc-500">Frontend</td>
                                         </tr>
                                         <tr className="hover:bg-white/5 transition-colors border-b border-white/5">
-                                            <td className="py-2 px-2 text-emerald-400">postgres.service</td>
+                                            <td className="py-2 px-2 text-sky-300">postgres.service</td>
                                             <td className="py-2 px-2 text-emerald-400">active (running)</td>
                                             <td className="py-2 px-2 text-zinc-500">Database</td>
                                         </tr>

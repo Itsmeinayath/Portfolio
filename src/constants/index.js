@@ -21,232 +21,82 @@ export const navLinks = [
     },
 ];
 
-export const clientReviews = [
-    {
-        id: 1,
-        name: 'Emily Johnson',
-        position: 'Marketing Director at GreenLeaf',
-        img: 'assets/review1.png',
-        review:
-            'Working with Adrian was a fantastic experience. He transformed our outdated website into a modern, user-friendly platform. His attention to detail and commitment to quality are unmatched. Highly recommend him for any web dev projects.',
-    },
-    {
-        id: 2,
-        name: 'Mark Rogers',
-        position: 'Founder of TechGear Shop',
-        img: 'assets/review2.png',
-        review:
-            'Adrian’s expertise in web development is truly impressive. He delivered a robust and scalable solution for our e-commerce site, and our online sales have significantly increased since the launch. He’s a true professional! Fantastic work.',
-    },
-    {
-        id: 3,
-        name: 'John Dohsas',
-        position: 'Project Manager at UrbanTech ',
-        img: 'assets/review3.png',
-        review:
-            'I can’t say enough good things about Adrian. He was able to take our complex project requirements and turn them into a seamless, functional website. His problem-solving abilities are outstanding.',
-    },
-    {
-        id: 4,
-        name: 'Ether Smith',
-        position: 'CEO of BrightStar Enterprises',
-        img: 'assets/review4.png',
-        review:
-            'Adrian was a pleasure to work with. He understood our requirements perfectly and delivered a website that exceeded our expectations. His skills in both frontend backend dev are top-notch.',
-    },
-];
+
 
 export const myProjects = [
     {
-        title: 'Blogify - Your Modern Blogging Platform',
-        desc: 'Blogify is an innovative platform for content creators, allowing seamless blog creation and management. With features like authentication, image uploads, and robust CRUD functionalities, it empowers users to craft engaging articles effortlessly.',
-        subdesc:
-            'Built using React.js and Appwrite, Blogify combines sleek design with powerful backend services to ensure a secure, user-friendly experience for bloggers of all levels.',
-
-        href: 'https://www.youtube.com/watch?v=zfAb95tJvZQ',
-        texture: '/textures/project/project1.mp4',
-        logo: '/assets/project-logo1.png',
-        logoStyle: {
-            backgroundColor: '#2A1816',
-            border: '0.2px solid #36201D',
-            boxShadow: '0px 0px 60px 0px #AA3C304D',
-        },
-        spotlight: '/assets/spotlight1.png',
-        tags: [
-            // {
-            //     id: 1,
-            //     name: 'React.js',
-            //     path: '/assets/react.svg',
-            // },
-            // {
-            //     id: 2,
-            //     name: 'TailwindCSS',
-            //     path: 'assets/tailwindcss.png',
-            // },
-            // {
-            //     id: 3,
-            //     name: 'TypeScript',
-            //     path: '/assets/typescript.png',
-            // },
-            // {
-            //     id: 4,
-            //     name: 'Framer Motion',
-            //     path: '/assets/framer.png',
-            // },
+        title: 'Chronithm',
+        subtitle: 'AI-Powered Developer Work Intelligence SaaS',
+        problem: 'Developers waste significant time writing daily standups instead of coding.',
+        solution: 'Automatically convert GitHub activity into structured, fluff-free reports.',
+        engineering: [
+            'Developed an event-driven webhook pipeline bypassing standard REST API rate limits.',
+            'Secured public ingestion endpoint against spoofed payloads using HMAC SHA-256.',
+            'Leveraged Gemini 2.5 Flash API with strict prompting to auto-generate standups.',
+            'Engineered 0ms-latency client-side filtering engine using React derived state.'
         ],
+        impact: 'Standups generated in seconds with zero redundant database queries.',
+        architecture: 'Client → React → Express → Webhook → Gemini → MongoDB',
+        links: {
+            live: 'https://chronithm.vercel.app/',
+        },
+        texture: '/textures/project/project1.mp4', 
     },
     {
-        title: 'Inverted Search Engine - Optimized Data Retrieval System',
-        desc: 'The Inverted Search Engine is a high-performance command-line tool designed for efficient data indexing and retrieval. By leveraging advanced data structures, it accelerates database operations and ensures persistent data storage across sessions.',
-        subdesc:
-            'Built using C programming, this project incorporates multi-level data structures like linked lists and hash tables, optimized input validation, and robust error-handling mechanisms to deliver seamless performance and reliability.',
-
-        href: 'https://www.youtube.com/watch?v=y5vE8y_f_OM',
-        texture: '/textures/project/project2.mp4',
-        logo: '/assets/project-logo2.png',
-        logoStyle: {
-            backgroundColor: '#13202F',
-            border: '0.2px solid #17293E',
-            boxShadow: '0px 0px 60px 0px #2F6DB54D',
-        },
-        spotlight: '/assets/spotlight2.png',
-        tags: [
-            // {
-            //     id: 1,
-            //     name: 'React.js',
-            //     path: '/assets/react.svg',
-            // },
-            // {
-            //     id: 2,
-            //     name: 'TailwindCSS',
-            //     path: 'assets/tailwindcss.png',
-            // },
-            // {
-            //     id: 3,
-            //     name: 'TypeScript',
-            //     path: '/assets/typescript.png',
-            // },
-            // {
-            //     id: 4,
-            //     name: 'Framer Motion',
-            //     path: '/assets/framer.png',
-            // },
+        title: 'CloudNest',
+        subtitle: 'AI-Native Cloud File Management Platform',
+        problem: 'Locating specific media files in large storage buckets is slow and un-semantic.',
+        solution: 'An AI-native media pipeline powering a natural-language "Smart Search" for file retrieval.',
+        engineering: [
+            'Architected an integration with the Gemini API to auto-generate semantic captions on upload.',
+            'Secured backend routes with Clerk Auth, enforcing cryptographic data isolation.',
+            'Utilized Drizzle ORM to tie every database query strictly to verified user sessions.',
+            'Integrated ImageKit CDN to compress image formats, significantly reducing load times.'
         ],
+        impact: 'Optimized media delivery and enabled instantaneous natural language retrieval.',
+        architecture: 'Next.js → Clerk → Drizzle ORM → PostgreSQL → ImageKit → Gemini',
+        links: {
+            live: 'https://cloud-nest-omega-sandy.vercel.app/',
+            source: 'https://github.com/Itsmeinayath/CloudNest',
+        },
+        texture: '/textures/project/project2.mp4', 
     },
     {
-        title: 'Digital LSB Steganography - Secure Data Embedding Solution',
-        desc: 'Digital LSB Steganography is an innovative project that uses the Least Significant Bit technique to embed secret messages within digital images, ensuring high imperceptibility and secure communication.',
-        subdesc:
-            'Developed in C programming, the project features optimized data-hiding algorithms for enhanced storage capacity, robust encoding/decoding modules with 100% accuracy in message retrieval, and maintains image quality for seamless integration.',
-
-        href: 'https://www.youtube.com/watch?v=lEflo_sc82g',
-        texture: '/textures/project/project3.mp4',
-        logo: '/assets/project-logo3.png',
-        logoStyle: {
-            backgroundColor: '#60f5a1',
-            background:
-                'linear-gradient(0deg, #60F5A150, #60F5A150), linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(208, 213, 221, 0.8) 100%)',
-            border: '0.2px solid rgba(208, 213, 221, 1)',
-            boxShadow: '0px 0px 60px 0px rgba(35, 131, 96, 0.3)',
-        },
-        spotlight: '/assets/spotlight3.png',
-        tags: [
-            // {
-            //     id: 1,
-            //     name: 'React.js',
-            //     path: '/assets/react.svg',
-            // },
-            // {
-            //     id: 2,
-            //     name: 'TailwindCSS',
-            //     path: 'assets/tailwindcss.png',
-            // },
-            // {
-            //     id: 3,
-            //     name: 'TypeScript',
-            //     path: '/assets/typescript.png',
-            // },
-            // {
-            //     id: 4,
-            //     name: 'Framer Motion',
-            //     path: '/assets/framer.png',
-            // },
+        title: 'VisualDB',
+        subtitle: 'Interactive SQL Execution Visualizer (Open Source)',
+        problem: 'CS students memorize SQL syntax rather than understanding how database engines actually execute queries under the hood.',
+        solution: 'A 100% client-side educational tool that parses SQL and visually animates the internal execution pipeline step-by-step.',
+        engineering: [
+            'Built a custom state machine utilizing node-sql-parser to generate Abstract Syntax Trees (AST) in the browser.',
+            'Engineered an interactive animation loop using React derived state to visualize row scans, filters, and hash aggregations.',
+            'Architected a strictly decoupled execution engine, allowing open-source contributors to easily build new UI modules.',
+            'Successfully open-sourced the platform, actively managing PRs and community contributions from global developers.'
         ],
+        impact: 'Actively used in university classrooms to teach database internals, with a growing open-source community.',
+        architecture: 'Client → React 19 → Vite → node-sql-parser → AST Engine',
+        links: {
+            live: 'https://visualdb-sooty.vercel.app/',
+            source: 'https://github.com/Itsmeinayath/visualdb',
+        },
+        texture: '/textures/project/project3.mp4', 
     },
-    // {
-    //     title: 'Horizon - Online Banking Platform',
-    //     desc: 'Horizon is a comprehensive online banking platform that offers users a centralized finance management dashboard. It allows users to connect multiple bank accounts, monitor real-time transactions, and seamlessly transfer money to other users.',
-    //     subdesc:
-    //         'Built with Next.js 14 Appwrite, Dwolla and Plaid, Horizon ensures a smooth and secure banking experience, tailored to meet the needs of modern consumers.',
-    //     href: 'https://www.youtube.com/watch?v=PuOVqP_cjkE',
-    //     texture: '/textures/project/project4.mp4',
-    //     logo: '/assets/project-logo4.png',
-    //     logoStyle: {
-    //         backgroundColor: '#0E1F38',
-    //         border: '0.2px solid #0E2D58',
-    //         boxShadow: '0px 0px 60px 0px #2F67B64D',
-    //     },
-    //     spotlight: '/assets/spotlight4.png',
-    //     tags: [
-    //         {
-    //             id: 1,
-    //             name: 'React.js',
-    //             path: '/assets/react.svg',
-    //         },
-    //         {
-    //             id: 2,
-    //             name: 'TailwindCSS',
-    //             path: 'assets/tailwindcss.png',
-    //         },
-    //         {
-    //             id: 3,
-    //             name: 'TypeScript',
-    //             path: '/assets/typescript.png',
-    //         },
-    //         {
-    //             id: 4,
-    //             name: 'Framer Motion',
-    //             path: '/assets/framer.png',
-    //         },
-    //     ],
-    // },
-    // {
-    //     title: 'Imaginify - AI Photo Manipulation App',
-    //     desc: 'Imaginify is a groundbreaking Software-as-a-Service application that empowers users to create stunning photo manipulations using AI technology. With features like AI-driven image editing, a payments system, and a credits-based model.',
-    //     subdesc:
-    //         'Built with Next.js 14, Cloudinary AI, Clerk, and Stripe, Imaginify combines cutting-edge technology with a user-centric approach. It can be turned into a side income or even a full-fledged business.',
-    //     href: 'https://www.youtube.com/watch?v=Ahwoks_dawU',
-    //     texture: '/textures/project/project5.mp4',
-    //     logo: '/assets/project-logo5.png',
-    //     logoStyle: {
-    //         backgroundColor: '#1C1A43',
-    //         border: '0.2px solid #252262',
-    //         boxShadow: '0px 0px 60px 0px #635BFF4D',
-    //     },
-    //     spotlight: '/assets/spotlight5.png',
-    //     tags: [
-    //         {
-    //             id: 1,
-    //             name: 'React.js',
-    //             path: '/assets/react.svg',
-    //         },
-    //         {
-    //             id: 2,
-    //             name: 'TailwindCSS',
-    //             path: 'assets/tailwindcss.png',
-    //         },
-    //         {
-    //             id: 3,
-    //             name: 'TypeScript',
-    //             path: '/assets/typescript.png',
-    //         },
-    //         {
-    //             id: 4,
-    //             name: 'Framer Motion',
-    //             path: '/assets/framer.png',
-    //         },
-    //     ],
-    // },
+    {
+        title: 'Inverted Search Engine',
+        subtitle: 'High-Performance CLI Text Retrieval System',
+        problem: 'Standard linear search algorithms fail to scale when querying massive document datasets.',
+        solution: 'An inverted index-based search system built entirely in C for blazing fast retrieval.',
+        engineering: [
+            'Indexed over 1,000,000 records using custom hash-table indexing.',
+            'Optimized lookup performance using rigorous manual memory management techniques.',
+            'Implemented multi-level data structures (linked lists + hash tables) to resolve collisions.',
+            'Built optimized file I/O operations for persistent data storage across sessions.'
+        ],
+        impact: 'Reduced search latency to milliseconds over massive datasets.',
+        architecture: 'CLI → C → Hash Tables → Linked Lists → File I/O',
+        links: {
+            source: 'https://github.com/itsmeinayath', 
+        }
+    },
 ];
 
 export const calculateSizes = (isSmall, isMobile, isTablet) => {
@@ -259,33 +109,4 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
         targetPosition: isSmall ? [-5, -10, -10] : isMobile ? [-9, -10, -10] : isTablet ? [-11, -7, -10] : [-13, -13, -10],
     };
 };
-
-export const workExperiences = [
-    {
-        id: 1,
-        name: 'Framer',
-        pos: 'Lead Web Developer',
-        duration: '2022 - Present',
-        title: "Framer serves as my go-to tool for creating interactive prototypes. I use it to bring designs to  life, allowing stakeholders to experience the user flow and interactions before development.",
-        icon: '/assets/framer.svg',
-        animation: 'victory',
-    },
-    {
-        id: 2,
-        name: 'Figma',
-        pos: 'Web Developer',
-        duration: '2020 - 2022',
-        title: "Figma is my collaborative design platform of choice. I utilize it to work seamlessly with team members and clients, facilitating real-time feedback and design iterations. Its cloud-based.",
-        icon: '/assets/figma.svg',
-        animation: 'clapping',
-    },
-    {
-        id: 3,
-        name: 'Notion',
-        pos: 'Junior Web Developer',
-        duration: '2019 - 2020',
-        title: "Notion helps me keep my projects organized. I use it for project management, task tracking, and as a central hub for documentation, ensuring that everything from design notes to.",
-        icon: '/assets/notion.svg',
-        animation: 'salute',
-    },
-];
+
