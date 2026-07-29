@@ -3,43 +3,57 @@ import {navLinks} from "../constants/index.js";
 
 const NavItem = () => {
    return (
-       <ul className="nav-ul">
+       <ul className="flex flex-col sm:flex-row items-center gap-8">
            {navLinks.map(({id, name, href}) => (
-               <li key={id} className="nav-li">
-                   <a href={href} className="nav-li_a" >
-                       {name}</a>
+               <li key={id} className="w-full sm:w-auto">
+                   <a href={href} className="block text-sm text-zinc-400 hover:text-white transition-all duration-200 hover:scale-105 active:scale-95 text-center sm:text-left py-2 sm:py-0 font-mono tracking-tight" onClick={() => setIsOpen(false)}>
+                       {name}
+                   </a>
                </li>
            ))}
        </ul>
    )
 }
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false)
-    const toggleMenu = () => setIsOpen((prevIsOpen) =>
-        !prevIsOpen
-    )
+    
+    const toggleMenu = () => setIsOpen((prevIsOpen) => !prevIsOpen)
+    
     return (
-        <header className="fixed top-0 right-0 left-0 z-50 bg-black/90">
-            <div className="max-w-7xl mx-auto">
-                <div className="flex justify-between items-center py-5 mx-auto c-space">
-                    <a href="/" className="text-neutral-400 font-bold text-xl hover:text-white transition-colors">
-                        inayath
+        <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-4xl border border-white/10 bg-[#050505]/60 backdrop-blur-xl rounded-full shadow-2xl">
+            <div className="px-6 h-14 flex items-center justify-between">
+                <div className="flex items-center gap-1.5 tracking-tight">
+                    <a href="/" className="font-bold text-lg tracking-tight text-white hover:text-emerald-400 transition-colors">
+                        Inayath
                     </a>
-                    <button onClick={toggleMenu}
-                            className="text-neutral-400 hover:text-white focus:outline-none sm:hidden flex"
-                            aria-label="toggle menu">
-                        <img src={isOpen ? "assets/close.svg" : "assets/menu.svg"} alt="toggle" className="w-6 h-6"/>
-                    </button>
-                    <nav className="sm:flex hidden">
-                        <NavItem/>
-                    </nav>
                 </div>
+                
+                <button onClick={toggleMenu}
+                        className="text-zinc-400 hover:text-white focus:outline-none sm:hidden flex transition-colors"
+                        aria-label="toggle menu">
+                    <img src={isOpen ? "assets/close.svg" : "assets/menu.svg"} alt="toggle" className="w-5 h-5"/>
+                </button>
+                
+                <nav className="sm:flex hidden">
+                    <NavItem/>
+                </nav>
             </div>
-           <div className={`nav-sidebar ${isOpen ? 'max-h-screen': 'max-h-0'}`}>
-               <nav className="py-5">
-                   <NavItem />
+            
+            {/* Mobile Sidebar */}
+            <div className={`absolute top-20 left-0 right-0 bg-[#050505]/95 backdrop-blur-xl border border-white/10 rounded-2xl transition-all duration-300 ease-in-out overflow-hidden sm:hidden shadow-2xl ${isOpen ? 'max-h-96 opacity-100': 'max-h-0 opacity-0 border-transparent'}`}>
+               <nav className="py-5 px-6">
+                   <ul className="flex flex-col gap-4">
+                       {navLinks.map(({id, name, href}) => (
+                           <li key={id} className="w-full border-b border-white/5 pb-3 last:border-0 last:pb-0">
+                               <a href={href} onClick={() => setIsOpen(false)} className="block text-sm text-zinc-400 hover:text-white transition-colors font-mono tracking-widest uppercase text-center" >
+                                   {name}
+                               </a>
+                           </li>
+                       ))}
+                   </ul>
                </nav>
-           </div>
+            </div>
         </header>
     )
 }
