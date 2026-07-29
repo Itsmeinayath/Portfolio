@@ -17,7 +17,7 @@ const Hero = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[700px] bg-emerald-600/15 blur-[150px] rounded-full pointer-events-none z-0" />
 
             {/* 3D Canvas Layer - Network is big and in the center */}
-            <div className="w-full h-full absolute inset-0 z-10 pointer-events-auto">
+            <div className="w-full h-full absolute inset-0 z-10 pointer-events-none">
                 <Canvas className="w-full h-full">
                     <Suspense fallback={<CanvasLoader />}>
                         <PerspectiveCamera makeDefault position={[0, 0, 24]} fov={60} />
