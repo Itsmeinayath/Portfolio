@@ -38,9 +38,9 @@ const Projects = () => {
                         
                         {/* Terminal output simulation */}
                         <div className="mt-8 font-mono text-xs text-zinc-600 border-t border-white/5 pt-4 flex flex-col gap-1">
-                            <p className="text-emerald-500/50">> Loading configuration...</p>
-                            <p>> Target: <span className="text-zinc-400">{currentProject.title.split(' - ')[0]}</span></p>
-                            <p>> Status: <span className="text-emerald-500">200 OK - Deployed</span></p>
+                            <p className="text-emerald-500/50">&gt; Loading configuration...</p>
+                            <p>&gt; Target: <span className="text-zinc-400">{currentProject.title.split(' - ')[0]}</span></p>
+                            <p>&gt; Status: <span className="text-emerald-500">200 OK - Deployed</span></p>
                             <p className="animate-pulse">_</p>
                         </div>
                     </div>
