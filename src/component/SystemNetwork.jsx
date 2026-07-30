@@ -8,7 +8,8 @@ const Packets = ({ vectors, radius }) => {
         const p = [];
         for (let i = 0; i < vectors.length; i++) {
             for (let j = i + 1; j < vectors.length; j++) {
-                if (vectors[i].distanceTo(vectors[j]) < radius * 0.55) {
+                // Keep packet paths matching the new lower density connection distance
+                if (vectors[i].distanceTo(vectors[j]) < radius * 0.35) {
                     p.push({ start: vectors[i], end: vectors[j] });
                 }
             }
@@ -66,7 +67,8 @@ const Packets = ({ vectors, radius }) => {
     );
 };
 
-const SystemNetwork = ({ count = 75, radius = 18, ...props }) => {
+// Reduced count from 75 to 55, increased radius from 18 to 22 to spread them out and reduce center density
+const SystemNetwork = ({ count = 55, radius = 22, ...props }) => {
     const group = useRef();
     const linesGeoRef = useRef();
     const pointsGeoRef = useRef();
@@ -80,7 +82,9 @@ const SystemNetwork = ({ count = 75, radius = 18, ...props }) => {
             const v = Math.random();
             const theta = u * 2.0 * Math.PI;
             const phi = Math.acos(2.0 * v - 1.0);
-            const r = Math.cbrt(Math.random()) * radius;
+            
+            // Push nodes slightly further towards the edges of the sphere, avoiding the exact dead center
+            const r = (0.3 + 0.7 * Math.cbrt(Math.random())) * radius;
             
             const x = r * Math.sin(phi) * Math.cos(theta);
             const y = r * Math.sin(phi) * Math.sin(theta);
@@ -94,8 +98,8 @@ const SystemNetwork = ({ count = 75, radius = 18, ...props }) => {
         for (let i = 0; i < count; i++) {
             for (let j = i + 1; j < count; j++) {
                 const dist = vectors[i].distanceTo(vectors[j]);
-                // Using 0.55 ensures it connects cleanly
-                if (dist < radius * 0.55) { 
+                // Reduced connection distance from 0.55 to 0.35 to drastically reduce line density (no more spiderweb)
+                if (dist < radius * 0.35) { 
                     connectionPositions.push(
                         vectors[i].x, vectors[i].y, vectors[i].z,
                         vectors[j].x, vectors[j].y, vectors[j].z
@@ -156,7 +160,7 @@ const SystemNetwork = ({ count = 75, radius = 18, ...props }) => {
                     <bufferGeometry ref={linesGeoRef}>
                         <bufferAttribute attach="attributes-position" count={connections.length / 3} array={connections} itemSize={3} />
                     </bufferGeometry>
-                    <lineBasicMaterial color="#e2e8f0" transparent opacity={0.15} blending={THREE.AdditiveBlending} depthWrite={false} />
+                    <lineBasicMaterial color="#94a3b8" transparent opacity={0.1} blending={THREE.AdditiveBlending} depthWrite={false} />
                 </lineSegments>
 
                 <Packets vectors={vectors} radius={radius} />
