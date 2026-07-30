@@ -60,7 +60,7 @@ const Packets = ({ vectors, radius }) => {
 
     return (
         <instancedMesh ref={meshRef} args={[null, null, packetCount]}>
-            <sphereGeometry args={[0.08, 8, 8]} />
+            <sphereGeometry args={[0.35, 8, 8]} />
             <meshBasicMaterial color="#10b981" toneMapped={false} transparent opacity={0} />
         </instancedMesh>
     );
@@ -149,14 +149,14 @@ const SystemNetwork = ({ count = 75, radius = 18, ...props }) => {
                     <bufferGeometry ref={pointsGeoRef}>
                         <bufferAttribute attach="attributes-position" count={positions.length / 3} array={positions} itemSize={3} />
                     </bufferGeometry>
-                    <pointsMaterial size={0.15} color="#10b981" transparent opacity={0.8} sizeAttenuation toneMapped={false} />
+                    <pointsMaterial size={0.8} color="#10b981" transparent opacity={0.9} sizeAttenuation toneMapped={false} />
                 </points>
                 
                 <lineSegments>
                     <bufferGeometry ref={linesGeoRef}>
                         <bufferAttribute attach="attributes-position" count={connections.length / 3} array={connections} itemSize={3} />
                     </bufferGeometry>
-                    <lineBasicMaterial color="#64748b" transparent opacity={0.4} />
+                    <lineBasicMaterial color="#cbd5e1" transparent opacity={0.7} />
                 </lineSegments>
 
                 <Packets vectors={vectors} radius={radius} />
