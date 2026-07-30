@@ -67,8 +67,8 @@ const Packets = ({ vectors, radius }) => {
     );
 };
 
-// Reduced count from 75 to 55, increased radius from 18 to 22 to spread them out and reduce center density
-const SystemNetwork = ({ count = 55, radius = 22, ...props }) => {
+// Reduced count to 65, increased radius from 18 to 22 to spread them out and reduce center density
+const SystemNetwork = ({ count = 65, radius = 22, ...props }) => {
     const group = useRef();
     const linesGeoRef = useRef();
     const pointsGeoRef = useRef();
