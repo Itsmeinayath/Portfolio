@@ -149,14 +149,14 @@ const SystemNetwork = ({ count = 75, radius = 18, ...props }) => {
                     <bufferGeometry ref={pointsGeoRef}>
                         <bufferAttribute attach="attributes-position" count={positions.length / 3} array={positions} itemSize={3} />
                     </bufferGeometry>
-                    <pointsMaterial size={0.1} color="#34d399" transparent opacity={0.7} sizeAttenuation toneMapped={false} />
+                    <pointsMaterial size={0.15} color="#10b981" transparent opacity={0.8} sizeAttenuation toneMapped={false} />
                 </points>
                 
                 <lineSegments>
                     <bufferGeometry ref={linesGeoRef}>
                         <bufferAttribute attach="attributes-position" count={connections.length / 3} array={connections} itemSize={3} />
                     </bufferGeometry>
-                    <lineBasicMaterial color="#334155" transparent opacity={0.25} />
+                    <lineBasicMaterial color="#64748b" transparent opacity={0.4} />
                 </lineSegments>
 
                 <Packets vectors={vectors} radius={radius} />

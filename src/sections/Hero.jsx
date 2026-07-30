@@ -17,8 +17,8 @@ const Hero = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[700px] bg-emerald-600/15 blur-[150px] rounded-full pointer-events-none z-0" />
 
             {/* 3D Canvas Layer - Network is big and in the center */}
-            <div className="w-full h-full absolute inset-0 z-10 pointer-events-none">
-                <Canvas className="w-full h-full" style={{ pointerEvents: 'none', touchAction: 'auto' }}>
+            <div className="w-full h-full absolute inset-0 z-10 pointer-events-none sm:pointer-events-auto">
+                <Canvas className="w-full h-full" style={{ touchAction: 'auto' }}>
                     <Suspense fallback={<CanvasLoader />}>
                         <PerspectiveCamera makeDefault position={[0, 0, 24]} fov={60} />
                         
@@ -43,8 +43,8 @@ const Hero = () => {
                 </Canvas>
             </div>
 
-            {/* Subtle radial gradient to separate text from the 3D network lines */}
-            <div className="absolute inset-0 z-15 pointer-events-none bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#050505]/70 via-[#050505]/20 to-transparent" />
+            {/* Subtle radial gradient to separate text from the 3D network lines - dark edges, clear center */}
+            <div className="absolute inset-0 z-15 pointer-events-none bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-[#050505]/50 to-[#050505]" />
 
             {/* Content Layer - Centered */}
             <div className="w-full max-w-7xl mx-auto flex flex-col items-center justify-center h-full z-20 pointer-events-none absolute inset-0 px-6 sm:px-10 pt-16">
