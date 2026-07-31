@@ -24,8 +24,9 @@ const Navbar = () => {
         <header className="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-3xl bg-transparent">
             <div className="px-5 h-12 flex items-center justify-between">
                 <div className="flex items-center gap-1.5 tracking-tight">
-                    <a href="/" className="font-semibold text-[15px] tracking-tight text-zinc-100 hover:text-emerald-400 transition-colors">
+                    <a href="/" className="font-semibold text-[15px] tracking-tight text-zinc-100 hover:text-emerald-400 transition-colors flex items-center gap-2">
                         Inayath
+                        <span className="text-zinc-600 text-[11px] font-normal hidden sm:inline-block ml-1">Software Engineer</span>
                     </a>
                 </div>
                 
