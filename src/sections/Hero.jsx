@@ -1,6 +1,6 @@
 import { Suspense } from 'react'
 import { Canvas } from "@react-three/fiber";
-import { PerspectiveCamera, OrbitControls } from "@react-three/drei";
+import { PerspectiveCamera } from "@react-three/drei";
 import CanvasLoader from "../component/CanvasLoader.jsx";
 import SystemNetwork from "../component/SystemNetwork.jsx";
 
@@ -29,16 +29,6 @@ const Hero = () => {
                         <ambientLight intensity={0.5} />
                         <directionalLight position={[10, 10, 10]} intensity={2} color="#10b981" />
                         <directionalLight position={[-10, -10, -10]} intensity={1} color="#3b82f6" />
-
-                        <OrbitControls
-                            enableZoom={false}
-                            enablePan={false}
-                            enableRotate={false}
-                            autoRotate
-                            autoRotateSpeed={0.2}
-                            maxPolarAngle={Math.PI / 2 + 0.3}
-                            minPolarAngle={Math.PI / 2 - 0.3}
-                        />
                     </Suspense>
                 </Canvas>
             </div>
