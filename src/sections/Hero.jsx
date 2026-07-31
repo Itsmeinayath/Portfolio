@@ -49,7 +49,7 @@ const Hero = () => {
                 </h1>
 
                 <p className="text-zinc-300 text-lg sm:text-xl font-medium leading-relaxed text-center max-w-3xl mt-6 drop-shadow-xl mx-auto">
-                    Not just writing code. I enjoy figuring out how things work from frontend interfaces to backend services, Docker containers, and Kubernetes clusters. <br />
+                    Building complete, end-to-end products—from intuitive interfaces to resilient cloud infrastructure. <br />
                     <span className="text-emerald-400 font-semibold mt-4 flex items-center justify-center gap-3 font-mono text-sm tracking-wide uppercase">
                         <span>Mohammed Inayath</span>
                         <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/50"></span>
