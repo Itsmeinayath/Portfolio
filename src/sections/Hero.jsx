@@ -41,7 +41,7 @@ const Hero = () => {
 
                 {/* Status Badge */}
                 <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/10 text-[11px] font-medium text-emerald-300 font-mono tracking-widest uppercase backdrop-blur-xl shadow-2xl mb-8">
-                    Currently Learning: Docker • Kubernetes • AWS
+                    Currently Learning:  Kubernetes 
                 </div>
 
                 <h1 className="text-5xl sm:text-7xl font-bold text-white tracking-tighter text-center leading-[1.1] drop-shadow-2xl">
@@ -49,7 +49,7 @@ const Hero = () => {
                 </h1>
 
                 <p className="text-zinc-300 text-lg sm:text-xl font-medium leading-relaxed text-center max-w-3xl mt-6 drop-shadow-xl mx-auto">
-                    Hi, I'm Mohammed Inayath—a software engineer and Full Stack Development lecturer. I'm fascinated by how software works beyond the code, from application architecture to cloud infrastructure. <br />
+                    Hi, I'm Mohammed Inayath a software engineer and Full Stack Development lecturer. I'm fascinated by how software works beyond the code, from application architecture to cloud infrastructure. <br />
                     <span className="text-emerald-400 font-semibold mt-6 flex items-center justify-center gap-3 font-mono text-sm tracking-wide uppercase">
                         <span>Mohammed Inayath</span>
                         <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/50"></span>
