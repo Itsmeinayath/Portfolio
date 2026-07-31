@@ -48,27 +48,14 @@ const Hero = () => {
                     Building software by <br className="hidden sm:block" /> understanding systems.
                 </h1>
 
-                <div className="text-zinc-300 text-lg sm:text-xl font-medium leading-relaxed text-center max-w-3xl mt-6 drop-shadow-xl mx-auto">
-                    <div className="mt-8 text-left bg-black/40 backdrop-blur-md border border-white/5 rounded-xl p-5 font-mono text-sm sm:text-[15px] max-w-md mx-auto shadow-2xl relative overflow-hidden group">
-                        {/* Subtle shine effect on hover */}
-                        <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/0 via-emerald-500/5 to-emerald-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-                        
-                        <div className="flex items-center gap-2 mb-4 border-b border-white/10 pb-3">
-                            <div className="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
-                            <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></div>
-                            <div className="w-2.5 h-2.5 rounded-full bg-green-500/80"></div>
-                            <div className="ml-2 text-zinc-500 text-xs">terminal</div>
-                        </div>
-                        <div className="text-emerald-400 mb-3"><span className="text-zinc-500 select-none">$</span> whoami</div>
-                        <div className="text-zinc-100 font-semibold mb-3 tracking-wide">Mohammed Inayath</div>
-                        <div className="text-zinc-400 space-y-1.5 ml-2">
-                            <div className="hover:text-zinc-200 transition-colors">Software Engineer</div>
-                            <div className="hover:text-zinc-200 transition-colors">Building products.</div>
-                            <div className="hover:text-zinc-200 transition-colors">Teaching students.</div>
-                            <div className="hover:text-zinc-200 transition-colors">Learning cloud infrastructure.</div>
-                        </div>
-                    </div>
-                </div>
+                <p className="text-zinc-300 text-lg sm:text-xl font-medium leading-relaxed text-center max-w-3xl mt-6 drop-shadow-xl mx-auto">
+                    Not just writing code. I enjoy figuring out how things work from frontend interfaces to backend services, Docker containers, and Kubernetes clusters. <br />
+                    <span className="text-emerald-400 font-semibold mt-4 flex items-center justify-center gap-3 font-mono text-sm tracking-wide uppercase">
+                        <span>Mohammed Inayath</span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500/50"></span>
+                        <span>Software Engineer</span>
+                    </span>
+                </p>
 
                 {/* Minimalist, subtle premium button */}
                 <a href="#work" className="mt-12 pointer-events-auto flex items-center gap-2 px-8 py-4 border border-white/10 rounded-full bg-white/5 hover:bg-white/10 hover:border-white/20 transition-all font-mono text-zinc-300 hover:text-white text-sm backdrop-blur-xl shadow-2xl">
