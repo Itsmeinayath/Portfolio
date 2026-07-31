@@ -17,10 +17,10 @@ const Packets = ({ vectors, radius }) => {
         return p;
     }, [vectors, radius]);
 
-    const packetCount = 15; 
+    const packetCount = 15;
     const meshRef = useRef();
     const dummy = useMemo(() => new THREE.Object3D(), []);
-    
+
     const packetData = useMemo(() => {
         if (paths.length === 0) return [];
         return new Array(packetCount).fill(0).map(() => {
@@ -38,17 +38,17 @@ const Packets = ({ vectors, radius }) => {
     useFrame((state, delta) => {
         timeRef.current += delta;
         if (!meshRef.current || paths.length === 0) return;
-        
+
         const opacity = Math.max(0, Math.min(1, (timeRef.current - 2.0) / 1.0));
         meshRef.current.material.opacity = opacity * 0.9;
-        
+
         packetData.forEach((data, i) => {
             data.progress += delta * data.speed;
             if (data.progress > 1) {
                 data.progress = 0;
                 data.path = paths[Math.floor(Math.random() * paths.length)];
             }
-            
+
             const pos = new THREE.Vector3().lerpVectors(data.path.start, data.path.end, data.progress);
             dummy.position.copy(pos);
             dummy.updateMatrix();
@@ -76,20 +76,20 @@ const SystemNetwork = ({ count = 70, radius = 24, ...props }) => {
     const { positions, connections, vectors } = useMemo(() => {
         const positions = [];
         const vectors = [];
-        
+
         for (let i = 0; i < count; i++) {
             const u = Math.random();
             const v = Math.random();
             const theta = u * 2.0 * Math.PI;
             const phi = Math.acos(2.0 * v - 1.0);
-            
+
             // Push nodes slightly further towards the edges of the sphere, avoiding the exact dead center
             const r = (0.3 + 0.7 * Math.cbrt(Math.random())) * radius;
-            
+
             const x = r * Math.sin(phi) * Math.cos(theta);
             const y = r * Math.sin(phi) * Math.sin(theta);
             const z = r * Math.cos(phi);
-            
+
             positions.push(x, y, z);
             vectors.push(new THREE.Vector3(x, y, z));
         }
@@ -99,7 +99,7 @@ const SystemNetwork = ({ count = 70, radius = 24, ...props }) => {
             for (let j = i + 1; j < count; j++) {
                 const dist = vectors[i].distanceTo(vectors[j]);
                 // Reduced connection distance from 0.55 to 0.35 to drastically reduce line density (no more spiderweb)
-                if (dist < radius * 0.35) { 
+                if (dist < radius * 0.35) {
                     connectionPositions.push(
                         vectors[i].x, vectors[i].y, vectors[i].z,
                         vectors[j].x, vectors[j].y, vectors[j].z
@@ -107,23 +107,23 @@ const SystemNetwork = ({ count = 70, radius = 24, ...props }) => {
                 }
             }
         }
-        
-        return { 
-            positions: new Float32Array(positions), 
-            connections: new Float32Array(connectionPositions), 
-            vectors 
+
+        return {
+            positions: new Float32Array(positions),
+            connections: new Float32Array(connectionPositions),
+            vectors
         };
     }, [count, radius]);
 
     const baseRotation = useRef({ x: 0, y: 0 });
     const timeRef = useRef(0);
-    const buildTime = 3.5; 
+    const buildTime = 3.5;
 
     useFrame((state, delta) => {
         timeRef.current += delta;
         const progress = Math.min(timeRef.current / buildTime, 1.0);
         const ease = 1 - Math.pow(1 - progress, 4);
-        
+
         if (linesGeoRef.current) linesGeoRef.current.setDrawRange(0, Math.floor((connections.length / 3) * ease) * 3);
         if (pointsGeoRef.current) pointsGeoRef.current.setDrawRange(0, Math.floor((positions.length / 3) * ease));
 
@@ -134,13 +134,13 @@ const SystemNetwork = ({ count = 70, radius = 24, ...props }) => {
 
             baseRotation.current.y += delta * 0.003;
             baseRotation.current.x += delta * 0.001;
-            
+
             const mouseOffsetX = (state.pointer.y * Math.PI) / 16;
             const mouseOffsetY = (state.pointer.x * Math.PI) / 16;
-            
+
             const targetX = baseRotation.current.x + mouseOffsetX;
             const targetY = baseRotation.current.y + mouseOffsetY;
-            
+
             group.current.rotation.x += (targetX - group.current.rotation.x) * 0.03;
             group.current.rotation.y += (targetY - group.current.rotation.y) * 0.03;
         }
@@ -155,7 +155,7 @@ const SystemNetwork = ({ count = 70, radius = 24, ...props }) => {
                     </bufferGeometry>
                     <pointsMaterial size={0.15} color="#ffffff" transparent opacity={0.6} sizeAttenuation toneMapped={false} blending={THREE.AdditiveBlending} depthWrite={false} />
                 </points>
-                
+
                 <lineSegments>
                     <bufferGeometry ref={linesGeoRef}>
                         <bufferAttribute attach="attributes-position" count={connections.length / 3} array={connections} itemSize={3} />
